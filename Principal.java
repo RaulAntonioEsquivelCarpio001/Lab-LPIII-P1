@@ -5,12 +5,25 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int var;
-		String nombre="Cartel del Tahuantinsuyo";
+		int num;
+		int Nvidas=3;
+		boolean cond=false;
+		String prem1="Yakuza Song of Life";
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Ingrese numero");
-		var = sc.nextInt();
-		System.out.println("Org Criminal: "+ nombre);
-		System.out.println("Miembros: "+ var);
+		int var1=5;
+		
+		do {
+			System.out.println("Ingrese numero");
+			num = sc.nextInt();
+			if (num==var1) {
+				System.out.println("Premio: "+prem1);
+				break;
+			}
+			if (cond==false) {
+				System.out.println("Mala suerte");
+				Nvidas --;
+			}
+		}while(Nvidas!=0);
+		
 }
 }
