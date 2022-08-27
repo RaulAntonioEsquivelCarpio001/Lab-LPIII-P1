@@ -1,14 +1,22 @@
 
 import java.util.Scanner;
 public class Principal {
+	
+	public static String elegir(int vida) {
+		String gift="";
+		switch (vida) {
+		case 1: gift = "Pasaje al caribe"; break;
+		case 2: gift = "Visita al museo más cercano"; break;
+		case 3: gift = "Entrada al cine"; break;
+		}
+		return gift;
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		int numer;
-		int Nvid=3;
+		int Nvid=0;
 		boolean cond=false;
-		String prem1="Yakuza Song of Life";
 		Scanner sc = new Scanner(System.in);
 		int var1=5;
 		
@@ -16,14 +24,14 @@ public class Principal {
 			System.out.println("Ingrese numero");
 			numer = sc.nextInt();
 			if (numer==var1) {
-				System.out.println("Premio: "+prem1);
-				break;
+				cond=true;
 			}
-			if (cond==false) {
+			else{
 				System.out.println("Mala suerte");
-				Nvid --;
 			}
-		}while(Nvid!=0);
-		
+			Nvid ++;
+		}while(cond!=true);
+		String premio=elegir(Nvid);
+		System.out.println("Premio:"+premio);
 }
 }
